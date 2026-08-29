@@ -1,0 +1,666 @@
+
+/* ================================
+   CONFIGURACIÓN GENERAL
+================================ */
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background: linear-gradient(135deg, #eef7f7, #f3f6f8);
+  color: #263238;
+}
+
+
+/* ================================
+   CONTENEDOR PRINCIPAL
+================================ */
+
+.contenedor {
+  width: min(1000px, 94%);
+  margin: 35px auto;
+}
+
+
+/* ================================
+   TARJETAS
+================================ */
+
+.tarjeta {
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 28px;
+  margin-bottom: 22px;
+  box-shadow: 0 6px 22px rgba(0, 80, 90, 0.10);
+  border: 1px solid #e0eeee;
+}
+
+
+/* ================================
+   ENCABEZADO PRINCIPAL
+================================ */
+
+.encabezado {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 25px;
+
+  padding: 25px 30px;
+
+  background: linear-gradient(
+    135deg,
+    #ffffff,
+    #eefafa
+  );
+
+  border-top: 5px solid #168b91;
+}
+
+
+/* ================================
+   LOGO + INFORMACIÓN HOSPITAL
+================================ */
+
+.marca-hospital {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.logo-contenedor {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 105px;
+}
+
+.logo {
+  width: 100px;
+  height: 100px;
+  object-fit: contain;
+}
+
+.informacion-hospital {
+  display: flex;
+  flex-direction: column;
+}
+
+.nombre-hospital {
+  color: #168b91;
+  font-size: 15px;
+  font-weight: 700;
+  margin-bottom: 4px;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+}
+
+h1 {
+  margin: 0 0 6px;
+  font-size: 32px;
+  color: #176b78;
+}
+
+.informacion-hospital p {
+  margin: 0;
+  color: #607078;
+  font-size: 15px;
+}
+
+
+/* ================================
+   MARCA DE DESARROLLADORES
+================================ */
+
+.marca-desarrolladores {
+  text-align: right;
+  padding-left: 20px;
+  border-left: 2px solid #b9ded9;
+}
+
+.iniciales {
+  font-size: 23px;
+  font-weight: 800;
+  color: #238b70;
+  letter-spacing: 2px;
+}
+
+.iniciales span {
+  color: #1596a0;
+  margin: 0 3px;
+}
+
+.texto-desarrolladores {
+  font-size: 12px;
+  font-weight: 700;
+  color: #607078;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-top: 3px;
+}
+
+.integrantes {
+  margin-top: 7px;
+  font-size: 12px;
+  line-height: 1.5;
+  color: #738086;
+}
+
+
+/* ================================
+   TARJETA DEL FORMULARIO
+================================ */
+
+.formulario-tarjeta {
+  background: linear-gradient(
+    135deg,
+    #edf8f4,
+    #e3f2ed
+  );
+
+  border: 1px solid #c5e1d8;
+
+  box-shadow:
+    0 7px 24px rgba(35, 139, 112, 0.10);
+}
+
+
+/* ================================
+   TÍTULOS DE SECCIÓN
+================================ */
+
+.titulo-seccion {
+  margin-bottom: 22px;
+
+  border-bottom: 1px solid #cfe3df;
+
+  padding-bottom: 14px;
+}
+
+h2 {
+  margin: 0 0 6px;
+  color: #176b78;
+  font-size: 22px;
+}
+
+.titulo-seccion p {
+  margin: 0;
+  color: #607078;
+  font-size: 14px;
+}
+
+
+/* ================================
+   FORMULARIO
+================================ */
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 18px;
+}
+
+.campo {
+  display: flex;
+  flex-direction: column;
+}
+
+.campo-completo {
+  grid-column: 1 / -1;
+}
+
+label {
+  font-weight: 700;
+  margin-bottom: 7px;
+  color: #34474d;
+}
+
+
+/* ================================
+   CAMPOS DEL FORMULARIO
+================================ */
+
+input,
+select,
+textarea {
+  width: 100%;
+
+  padding: 11px 12px;
+
+  border: 1px solid #b9c8cb;
+  border-radius: 8px;
+
+  font: inherit;
+
+  background: rgba(255, 255, 255, 0.94);
+  color: #263238;
+
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease,
+    background 0.2s ease;
+}
+
+input::placeholder,
+textarea::placeholder {
+  color: #9aa7ab;
+}
+
+
+/* Hover */
+
+input:hover,
+select:hover,
+textarea:hover {
+  border-color: #72b9b4;
+  background: #ffffff;
+}
+
+
+/* Focus */
+
+input:focus,
+select:focus,
+textarea:focus {
+  outline: none;
+
+  border-color: #168b91;
+
+  background: #ffffff;
+
+  box-shadow:
+    0 0 0 3px rgba(22, 139, 145, 0.10);
+}
+
+
+/* Textarea */
+
+textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+
+
+/* ================================
+   VALIDACIONES
+================================ */
+
+.invalido {
+  border-color: #c62828 !important;
+  background: #fffafa !important;
+}
+
+small {
+  min-height: 18px;
+
+  color: #c62828;
+
+  margin-top: 4px;
+
+  font-size: 12px;
+}
+
+
+/* ================================
+   BOTONES
+================================ */
+
+.acciones {
+  display: flex;
+
+  gap: 10px;
+
+  margin-top: 22px;
+
+  flex-wrap: wrap;
+}
+
+.btn {
+  border: 0;
+
+  border-radius: 8px;
+
+  padding: 11px 20px;
+
+  font-weight: 700;
+
+  cursor: pointer;
+
+  transition:
+    transform 0.2s ease,
+    opacity 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+
+/* Guardar / Buscar */
+
+.principal {
+  background: #168b91;
+  color: #ffffff;
+}
+
+
+/* Limpiar */
+
+.secundario {
+  background: #dceff0;
+  color: #176b78;
+}
+
+
+/* Cerrar */
+
+.cerrar {
+  background: #b8d8c9;
+  color: #183d35;
+}
+
+
+/* Hover */
+
+.btn:hover {
+  transform: translateY(-1px);
+
+  opacity: 0.92;
+
+  box-shadow:
+    0 3px 8px rgba(0, 0, 0, 0.10);
+}
+
+
+/* Active */
+
+.btn:active {
+  transform: translateY(0);
+}
+
+
+/* ================================
+   MENSAJES
+================================ */
+
+.mensaje {
+  padding: 12px 15px;
+
+  border-radius: 8px;
+
+  margin-bottom: 18px;
+
+  font-weight: 700;
+}
+
+.mensaje.exito {
+  background: #e1f3e8;
+
+  color: #17633b;
+
+  border-left: 4px solid #2c9b70;
+}
+
+.mensaje.error {
+  background: #fde5e5;
+
+  color: #8e2020;
+
+  border-left: 4px solid #c62828;
+}
+
+.oculto {
+  display: none;
+}
+
+
+/* ================================
+   BÚSQUEDA
+================================ */
+
+.busqueda {
+  display: flex;
+
+  gap: 10px;
+
+  margin-bottom: 18px;
+}
+
+.busqueda input {
+  flex: 1;
+}
+
+
+/* ================================
+   RESULTADOS
+================================ */
+
+.resultados {
+  overflow-x: auto;
+}
+
+table {
+  width: 100%;
+
+  border-collapse: collapse;
+}
+
+th,
+td {
+  padding: 11px;
+
+  border-bottom: 1px solid #dfe8e8;
+
+  text-align: left;
+}
+
+th {
+  background: #e7f4f3;
+
+  color: #176b78;
+
+  font-weight: 700;
+}
+
+tr:hover td {
+  background: #f5fbfb;
+}
+
+.vacio {
+  padding: 15px;
+
+  background: #f3f8f8;
+
+  border-radius: 8px;
+
+  color: #607078;
+
+  border-left: 4px solid #7bbdb8;
+}
+
+
+/* ================================
+   VENTANA DE CONFIRMACIÓN
+================================ */
+
+dialog {
+  border: 0;
+
+  border-radius: 14px;
+
+  padding: 0;
+
+  width: min(450px, 90%);
+
+  box-shadow:
+    0 12px 45px rgba(0, 0, 0, 0.25);
+}
+
+.dialogo-contenido {
+  padding: 28px;
+}
+
+dialog h2 {
+  margin-bottom: 10px;
+}
+
+dialog p {
+  color: #607078;
+
+  line-height: 1.5;
+}
+
+dialog::backdrop {
+  background: rgba(23, 67, 72, 0.45);
+}
+
+
+/* ================================
+   PIE DE PÁGINA
+================================ */
+
+.pie-pagina {
+  text-align: center;
+
+  margin: 30px auto 15px;
+
+  color: #607078;
+
+  font-size: 13px;
+}
+
+.pie-pagina .linea {
+  width: 80px;
+
+  height: 3px;
+
+  margin: 0 auto 12px;
+
+  border-radius: 5px;
+
+  background: linear-gradient(
+    90deg,
+    #168b91,
+    #2c9b70
+  );
+}
+
+.pie-pagina p {
+  margin: 4px 0;
+
+  font-weight: 700;
+
+  color: #176b78;
+}
+
+.pie-pagina span {
+  display: block;
+
+  margin-bottom: 5px;
+}
+
+.pie-pagina small {
+  color: #238b70;
+
+  font-weight: 700;
+}
+
+
+/* ================================
+   DISEÑO RESPONSIVO
+================================ */
+
+@media (max-width: 700px) {
+
+  .contenedor {
+    width: 94%;
+
+    margin: 20px auto;
+  }
+
+
+  .tarjeta {
+    padding: 20px;
+  }
+
+
+  /* Encabezado */
+
+  .encabezado {
+    flex-direction: column;
+
+    align-items: flex-start;
+
+    text-align: left;
+  }
+
+
+  .marca-hospital {
+    width: 100%;
+  }
+
+
+  .marca-desarrolladores {
+    width: 100%;
+
+    border-left: 0;
+
+    border-top: 1px solid #b9ded9;
+
+    padding-left: 0;
+
+    padding-top: 15px;
+
+    text-align: left;
+  }
+
+
+  /* Logo */
+
+  .logo {
+    width: 80px;
+
+    height: 80px;
+  }
+
+
+  /* Título */
+
+  h1 {
+    font-size: 26px;
+  }
+
+
+  /* Formulario */
+
+  .grid {
+    grid-template-columns: 1fr;
+  }
+
+  .campo-completo {
+    grid-column: auto;
+  }
+
+
+  /* Búsqueda */
+
+  .busqueda {
+    flex-direction: column;
+  }
+
+  .busqueda .btn {
+    width: 100%;
+  }
+
+
+  /* Botones */
+
+  .acciones {
+    flex-direction: column;
+  }
+
+  .acciones .btn {
+    width: 100%;
+  }
+
+}

@@ -1,0 +1,510 @@
+```html
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Ficha Médica | Hospital Los Alpes</title>
+
+  <!-- Hoja de estilos -->
+  <link rel="stylesheet" href="estilos.css">
+</head>
+
+<body>
+
+  <!-- =========================================
+       CONTENEDOR PRINCIPAL
+  ========================================== -->
+  <main class="contenedor">
+
+
+    <!-- =========================================
+         ENCABEZADO / IDENTIDAD DEL HOSPITAL
+    ========================================== -->
+    <section class="tarjeta encabezado">
+
+      <!-- Logo e información del hospital -->
+      <div class="marca-hospital">
+
+        <div class="logo-contenedor">
+          <img
+            src="logo.png"
+            alt="Logotipo Hospital Los Alpes"
+            class="logo"
+          >
+        </div>
+
+        <div class="informacion-hospital">
+
+          <span class="nombre-hospital">
+            Hospital Los Alpes
+          </span>
+
+          <h1>
+            Ficha Médica
+          </h1>
+
+          <p>
+            Registro y consulta de pacientes
+          </p>
+
+        </div>
+
+      </div>
+
+
+      <!-- Información de los desarrolladores -->
+      <div class="marca-desarrolladores">
+
+        <div class="iniciales">
+          CF <span>·</span> DB
+        </div>
+
+        <div class="texto-desarrolladores">
+          Desarrolladores
+        </div>
+
+        <div class="integrantes">
+          Cristobal Fuentes<br>
+          Dayana Betancourt
+        </div>
+
+      </div>
+
+    </section>
+
+
+
+    <!-- =========================================
+         FORMULARIO DE FICHA MÉDICA
+    ========================================== -->
+    <section class="tarjeta formulario-tarjeta">
+
+      <!-- Título -->
+      <div class="titulo-seccion">
+
+        <h2>
+          Registro del paciente
+        </h2>
+
+        <p>
+          Complete los datos solicitados para registrar la ficha médica.
+        </p>
+
+      </div>
+
+
+      <!-- Mensaje general -->
+      <div
+        id="mensaje"
+        class="mensaje oculto"
+        role="alert"
+        aria-live="polite">
+      </div>
+
+
+      <!-- FORMULARIO -->
+      <form
+        id="formFicha"
+        novalidate>
+
+
+        <!-- =====================================
+             CAMPOS DEL FORMULARIO
+        ====================================== -->
+        <div class="grid">
+
+
+          <!-- RUT -->
+          <div class="campo">
+
+            <label for="rut">
+              RUT *
+            </label>
+
+            <input
+              id="rut"
+              name="rut"
+              type="text"
+              maxlength="12"
+              placeholder="12.345.678-5"
+              autocomplete="off"
+            >
+
+            <small id="error-rut"></small>
+
+          </div>
+
+
+          <!-- NOMBRES -->
+          <div class="campo">
+
+            <label for="nombres">
+              Nombres *
+            </label>
+
+            <input
+              id="nombres"
+              name="nombres"
+              type="text"
+              maxlength="60"
+              placeholder="Ingrese nombres"
+              autocomplete="given-name"
+            >
+
+            <small id="error-nombres"></small>
+
+          </div>
+
+
+          <!-- APELLIDOS -->
+          <div class="campo">
+
+            <label for="apellidos">
+              Apellidos *
+            </label>
+
+            <input
+              id="apellidos"
+              name="apellidos"
+              type="text"
+              maxlength="60"
+              placeholder="Ingrese apellidos"
+              autocomplete="family-name"
+            >
+
+            <small id="error-apellidos"></small>
+
+          </div>
+
+
+          <!-- DIRECCIÓN -->
+          <div class="campo">
+
+            <label for="direccion">
+              Dirección *
+            </label>
+
+            <input
+              id="direccion"
+              name="direccion"
+              type="text"
+              maxlength="100"
+              placeholder="Ingrese dirección"
+              autocomplete="street-address"
+            >
+
+            <small id="error-direccion"></small>
+
+          </div>
+
+
+          <!-- CIUDAD -->
+          <div class="campo">
+
+            <label for="ciudad">
+              Ciudad *
+            </label>
+
+            <input
+              id="ciudad"
+              name="ciudad"
+              type="text"
+              maxlength="50"
+              placeholder="Ingrese ciudad"
+              autocomplete="address-level2"
+            >
+
+            <small id="error-ciudad"></small>
+
+          </div>
+
+
+          <!-- TELÉFONO -->
+          <div class="campo">
+
+            <label for="telefono">
+              Teléfono *
+            </label>
+
+            <input
+              id="telefono"
+              name="telefono"
+              type="tel"
+              maxlength="15"
+              placeholder="+56 9 1234 5678"
+              autocomplete="tel"
+            >
+
+            <small id="error-telefono"></small>
+
+          </div>
+
+
+          <!-- EMAIL -->
+          <div class="campo">
+
+            <label for="email">
+              Email *
+            </label>
+
+            <input
+              id="email"
+              name="email"
+              type="email"
+              maxlength="100"
+              placeholder="ejemplo@correo.cl"
+              autocomplete="email"
+            >
+
+            <small id="error-email"></small>
+
+          </div>
+
+
+          <!-- FECHA DE NACIMIENTO -->
+          <div class="campo">
+
+            <label for="fechaNacimiento">
+              Fecha de nacimiento *
+            </label>
+
+            <input
+              id="fechaNacimiento"
+              name="fechaNacimiento"
+              type="date"
+            >
+
+            <small id="error-fechaNacimiento"></small>
+
+          </div>
+
+
+          <!-- ESTADO CIVIL -->
+          <div class="campo">
+
+            <label for="estadoCivil">
+              Estado civil *
+            </label>
+
+            <select
+              id="estadoCivil"
+              name="estadoCivil">
+
+              <option value="">
+                Seleccione una opción
+              </option>
+
+              <option value="Soltero/a">
+                Soltero/a
+              </option>
+
+              <option value="Casado/a">
+                Casado/a
+              </option>
+
+              <option value="Divorciado/a">
+                Divorciado/a
+              </option>
+
+              <option value="Viudo/a">
+                Viudo/a
+              </option>
+
+              <option value="Conviviente">
+                Conviviente
+              </option>
+
+            </select>
+
+            <small id="error-estadoCivil"></small>
+
+          </div>
+
+
+          <!-- COMENTARIOS -->
+          <div class="campo campo-completo">
+
+            <label for="comentarios">
+              Comentarios
+            </label>
+
+            <textarea
+              id="comentarios"
+              name="comentarios"
+              rows="4"
+              maxlength="500"
+              placeholder="Observaciones adicionales"
+            ></textarea>
+
+            <small id="error-comentarios"></small>
+
+          </div>
+
+        </div>
+
+
+        <!-- =====================================
+             BOTONES
+        ====================================== -->
+        <div class="acciones">
+
+          <button
+            type="submit"
+            class="btn principal">
+            Guardar
+          </button>
+
+          <button
+            type="button"
+            id="btnLimpiar"
+            class="btn secundario">
+            Limpiar
+          </button>
+
+          <button
+            type="button"
+            id="btnCerrar"
+            class="btn cerrar">
+            Cerrar
+          </button>
+
+        </div>
+
+      </form>
+
+    </section>
+
+
+
+    <!-- =========================================
+         BÚSQUEDA DE PACIENTES
+    ========================================== -->
+    <section class="tarjeta">
+
+      <div class="titulo-seccion">
+
+        <h2>
+          Buscar paciente
+        </h2>
+
+        <p>
+          Busque un paciente utilizando su apellido.
+        </p>
+
+      </div>
+
+
+      <!-- Campo de búsqueda -->
+      <div class="busqueda">
+
+        <input
+          id="buscarApellido"
+          type="search"
+          placeholder="Ingrese apellido"
+          aria-label="Apellido del paciente"
+          autocomplete="off"
+        >
+
+        <button
+          type="button"
+          id="btnBuscar"
+          class="btn principal">
+          Buscar
+        </button>
+
+      </div>
+
+
+      <!-- Resultados -->
+      <div
+        id="resultados"
+        class="resultados">
+
+        <p class="vacio">
+          Ingrese un apellido para realizar una búsqueda.
+        </p>
+
+      </div>
+
+    </section>
+
+  </main>
+
+
+
+  <!-- =========================================
+       DIÁLOGO PARA SOBRESCRIBIR REGISTRO
+  ========================================== -->
+  <dialog id="dialogoSobrescribir">
+
+    <div class="dialogo-contenido">
+
+      <h2>
+        Registro existente
+      </h2>
+
+      <p>
+        Ya existe un registro con este RUT.
+        ¿Desea sobrescribirlo?
+      </p>
+
+
+      <div class="acciones">
+
+        <button
+          type="button"
+          id="btnConfirmar"
+          class="btn principal">
+          Sí, sobrescribir
+        </button>
+
+        <button
+          type="button"
+          id="btnCancelar"
+          class="btn secundario">
+          Cancelar
+        </button>
+
+      </div>
+
+    </div>
+
+  </dialog>
+
+
+
+  <!-- =========================================
+       PIE DE PÁGINA
+  ========================================== -->
+  <footer class="pie-pagina">
+
+    <div class="linea"></div>
+
+    <p>
+      Hospital Los Alpes
+    </p>
+
+    <span>
+      Sistema de Ficha Médica
+    </span>
+
+    <small>
+      Desarrollado por CF · DB
+    </small>
+
+  </footer>
+
+
+
+  <!-- =========================================
+       JAVASCRIPT
+  ========================================== -->
+  <script src="script.js"></script>
+
+</body>
+
+</html>
+```
